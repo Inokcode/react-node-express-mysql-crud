@@ -36,8 +36,7 @@ Insert gif or link to demo
 Install my-project with npm
 
 ```bash
-  npm install my-project
-  cd my-project
+ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 ```
     
 ## Deployment
