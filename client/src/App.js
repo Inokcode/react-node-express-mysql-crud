@@ -41,7 +41,6 @@ function App() {
       movieReview: newReview,
     });
     setNewReview('');
-    setMovieReviewList([movieReviewList]);
   };
   //
   return (
