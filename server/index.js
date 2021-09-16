@@ -34,6 +34,29 @@ app.get('/api/get', (req, res) => {
     res.send(result);
   });
 });
+//
+app.delete('/api/delete/:movieName', (req, res) => {
+  const name = req.params.movieName;
+  const sqlDelete = 'DELETE FROM movie_reviews WHERE movieName = ?';
+  db.query(sqlDelete, name, (err, result) => {
+    if (err) throw err;
+    console.log('delete record Effected');
+    res.send(result);
+  });
+});
+//
+app.put('/api/update', (req, res) => {
+  const name = req.body.movieName;
+  const review = req.body.movieReview;
+  const sqlUpdate =
+    'UPDATE movie_reviews SET movieReview = ? WHERE movieName = ?';
+  db.query(sqlUpdate, [review, name], (err, result) => {
+    if (err) throw err;
+    console.log('update record Effected');
+    res.send(result);
+  });
+});
+//
 // app.get('/', (req, res) => {
 //   const sqlInsert =
 //     "INSERT INTO movie_reviews (movieName,movieReview) VALUES ('STAPPUS','God bless you')";
