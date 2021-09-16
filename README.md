@@ -1,21 +1,22 @@
 
 # Project Title
 
-Project for Node sign up,login implementation
+Project for React CRUD with mysql,node,express
 
 
 ## Tech Stack
 
-**Client:** ejs,postman
+**Client:** react,axios,postman
 
-**Server:** node, express, mongoose, bcrypt, jsonwebtoken, cookie-parser, validator
+**Server:** node, express, mysql, cors, nodemon
 
   
 ## Features
 
-- sign up
-- log in
-- log out
+- Add record
+- Get record
+- Delete record
+- Update record
   
   
 ## Screenshots
